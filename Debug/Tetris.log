@@ -1,0 +1,10 @@
+﻿  1_main.c
+  2_ConsoleController.c
+  3_GameDrawer.c
+  4_BlockMaker.c
+  5_BlockController.c
+  6_BlockDetector.c
+  7_GameManager.c
+  코드를 생성하고 있습니다...
+C:\Users\조두환\source\repos\Tetris.ver2\Tetris.ver2\7_GameManager.c(48,9): warning C4552:  '-': 식의 결과가 사용되지 않습니다.
+  Tetris.vcxproj -> C:\Users\조두환\source\repos\Tetris.ver2\Tetris.ver2\Debug\TetrisProject.exe
