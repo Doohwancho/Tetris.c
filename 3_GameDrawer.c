@@ -24,8 +24,8 @@ void IntroDrawer()
 	{
 		if (_kbhit()) // 입력이 있을때까지
 			break;
-		Gotoxy(x + 9, y + 13); printf("  >> PRESS ANY BUTTON <<  "); Sleep(200);
-		Gotoxy(x + 9, y + 13); printf("                          "); Sleep(200);
+		Gotoxy(x + 8, y + 13); printf("  >> PRESS ANY BUTTON <<  "); Sleep(200);
+		Gotoxy(x + 8, y + 13); printf("                          "); Sleep(200);
 	}
 
 	while (_kbhit()) // 버퍼 지우기
@@ -157,10 +157,10 @@ void PrintGameOver()
 	}
 
 	PrintGameBoard();
-	Gotoxy(4, 12);
+	Gotoxy(14, 10); //4, 12
 	printf("GameOver");
 
-	Gotoxy(2, 12);
+	Gotoxy(12, 14); //2, 12
 	printf("Press Any Button");
 
 	Sleep(500);
