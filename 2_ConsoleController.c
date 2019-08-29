@@ -39,11 +39,8 @@ void SetConsole()
 	ConsoleSize();
 	RemoveScrollbar();
 	RemoveCurser();
-	MusicPlay();
+	BackGroundMusic();
 }
 
 
-void MusicPlay() // 음악을 반복재생합니다.
-{
-	PlaySound(TEXT(SOUND_FILE_NAME), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
-}
+

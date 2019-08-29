@@ -34,6 +34,8 @@ void LineCheck()
 
 		if (block_linecheck == SIZE_X - 2) 
 		{
+			LineClearSound();
+			
 			deleteline_total++;
 			deleteline_combo++;
 			for (k = y; k > 1; k--) 

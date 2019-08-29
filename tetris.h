@@ -1,15 +1,15 @@
 #pragma once
 #pragma comment(lib,"winmm.lib")
 
-
 #include<stdio.h>
 #include<windows.h>
 #include<time.h>
 #include<conio.h>
 #include <mmsystem.h>
+#include "Digitalv.h"
 
 #define _CRT_SECURE_NO_WARNINGS
-#define SOUND_FILE_NAME "Tetris.wav"
+#define SOUND_FILE_NAME "TetrisWav.wav"
 
 #define SIZE_X 12 //12
 #define SIZE_Y 24 //24
@@ -24,6 +24,12 @@
 
 #define TRUE 1 //충돌을 안했다면
 #define FALSE 0 //충돌을 했다면
+
+MCI_OPEN_PARMS m_mciOpenParms;
+MCI_PLAY_PARMS m_mciPlayParms;
+DWORD m_dwDeviceID;
+MCI_OPEN_PARMS mciOpen;
+MCI_PLAY_PARMS mciPlay;
 
 enum { EMPTY = 0, MBLOCK = 1, OVERLINE = 2, SBLOCK = 3, WALL = 4, FBLOCK = 5 };
 
@@ -48,6 +54,7 @@ int count;
 int block_typeN1;
 int block_typeN2;
 int block_typeN3;
+int dwID;
 
 //2_ConsoleController 소스파일의 함수 선언
 void Gotoxy(int x, int y);
@@ -55,7 +62,6 @@ void ConsoleSize();
 void RemoveScrollbar();
 void RemoveCurser();
 void SetConsole();
-void MusicPlay();
 
 //3_GameDrawer 소스파일의 함수 선언
 void IntroDrawer();
@@ -90,3 +96,11 @@ void PrintInformation();
 void ResetInformation();
 void GameOverCheck();
 void NextBlockPush();
+
+//8_MusicManager 소스파일의 함수 선언
+void BackGroundMusic();
+void BackGroundMusicPause();
+void BackGroundMusicResume();
+void LineClearSound();
+void HardDropSound();
+void GameOverMusic();

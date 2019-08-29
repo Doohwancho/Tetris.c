@@ -148,6 +148,8 @@ void PrintInformation()
 
 void PrintGameOver()
 {
+	BackGroundMusicPause();
+	GameOverMusic();
 	for (int y = 0; y < SIZE_Y - 1; y++)
 	{
 		for (int x = 1; x < SIZE_X - 1; x++)

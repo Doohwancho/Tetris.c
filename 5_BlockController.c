@@ -33,6 +33,7 @@ void BlockMove(int inputX, int inputY, int input_rotation)
 
 void BlockFix()
 {
+	HardDropSound();
 	for (int y = 0; y < SIZE_Y; y++)
 	{
 		for (int x = 0; x < SIZE_X; x++)

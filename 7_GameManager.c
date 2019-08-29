@@ -159,6 +159,7 @@ void GameOverCheck()
 
 			system("cls");
 
+			BackGroundMusicResume();
 			ResetGameBoard();
 			ResetCopyGameBoard();
 			PrintGameBoard();
